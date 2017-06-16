@@ -17,17 +17,17 @@ def create_app():
 app = create_app()
 
 # REPLACE WITH YOUR DATABASE NAME
-MONGODATABASE = "myDatabase"
-MONGOSERVER = "localhost"
+MONGODATABASE = "dbMongoEntrega4"
+MONGOSERVER = "query17-13.ing.puc.cl"
 MONGOPORT = 27017
 client = MongoClient(MONGOSERVER, MONGOPORT)
 mongodb = client[MONGODATABASE]
 
 ''' # Uncomment for postgres connection
 # REPLACE WITH YOUR DATABASE NAME, USER AND PASS
-POSTGRESDATABASE = "mydatabase"
-POSTGRESUSER = "myuser"
-POSTGRESPASS = "mypass"
+POSTGRESDATABASE = "dbPostgresEntrega4"
+POSTGRESUSER = "grupo15"
+POSTGRESPASS = "grupo15"
 postgresdb = psycopg2.connect(
     database=POSTGRESDATABASE,
     user=POSTGRESUSER,
