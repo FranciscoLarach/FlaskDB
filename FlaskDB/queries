@@ -1,34 +1,22 @@
 [
   {
-    "name": "Seleccionar todo",
-    "database": "postgres",
-    "description": "Una muy breve descripción",
-    "query": "SELECT * FROM mytable;"
-  },
-  {
-  "name": "Lorem ipsum dolor sit amet",
+  "name": "Query1",
   "database": "mongo",
-  "description":
-  "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
-  "query": "myCollection.find( {\"attribute\": \"value\"} )"
+  "description": "Dada una fecha, todos los numeros para los que se tienen mensajes en esa fecha",
+  "query": "escuchas.find( {\"attribute\": \"value\"} )"
   },
   {
-    "name": "Sebastián",
-    "database": "postgres",
-    "description": "Una consulta de Sebastián 🙋",
-    "query": "SELECT * FROM mytable WHERE nombre='Sebastián';"
-  },
-  {
-    "name": "Quiero todo de mongo 😄",
+    "name": "Query2",
     "database": "mongo",
-    "description": "...",
-    "query": "myCollection.find()"
+    "description": "Dado un numero y un entero k, los k ultimos mensajes de ese numero",
+    "query": "escuchas.find()"
   },
   {
-    "name": "Insertar a mongo",
+    "name": "Query3",
     "database": "mongo",
     "description":
-      "Vestibulum vulputate metus at nisl lacinia blandit. Quisque fermentum sagittis mi",
-    "query": "myCollection.insert( { \"attribute\": \"value\" } )"
+      "Dada una palabra clave, todos los JSON en los que aparece esa palabra clave en el
+contenido",
+    "query": "escuchas.insert( { \"attribute\": \"value\" } )"
   }
 ]
