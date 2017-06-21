@@ -60,14 +60,14 @@ def mongo():
         return "ok"
 
 
-@app.route("/postgres")
-def postgres():
-    query = request.args.get("query")
-    cursor = postgresdb.cursor()
-    cursor.execute(query)
-    results = [[a for a in result] for result in cursor]
-    print(results)
-    return render_template('postgres.html', results=results)
+# @app.route("/postgres")
+# def postgres():
+#     query = request.args.get("query")
+#     cursor = postgresdb.cursor()
+#     cursor.execute(query)
+#     results = [[a for a in result] for result in cursor]
+#     print(results)
+#     return render_template('postgres.html', results=results)
 
 
 @app.route("/example")
