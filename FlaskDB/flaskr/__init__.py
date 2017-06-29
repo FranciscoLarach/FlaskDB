@@ -40,6 +40,10 @@ def home():
 collection = mongodb["escuchas"]
 collection.create_index([('contenido', 'text')])
 
+@app.route("/example", methods=['GET'])
+def example():
+    return "Exito!"
+
 @app.route("/query1", methods=['GET'])
 def consulta_1():
     date = request.args.get('fecha')
@@ -116,11 +120,6 @@ def mongo():
 #     results = [[a for a in result] for result in cursor]
 #     print(results)
 #     return render_template('postgres.html', results=results)
-
-
-@app.route("/example")
-def example():
-    return render_template('example.html')
 
 
 if __name__ == "__main__":
